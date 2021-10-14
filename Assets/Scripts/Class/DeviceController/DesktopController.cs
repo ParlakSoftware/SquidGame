@@ -13,7 +13,7 @@ namespace Assets.Scripts.Class.DeviceController
         {
             if (SimpleInput.GetButton("TryAgain"))
             {
-                Debug.Log("Tekrar Başlıyor");
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
 

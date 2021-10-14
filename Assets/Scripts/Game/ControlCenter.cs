@@ -44,14 +44,14 @@ public class ControlCenter : MonoBehaviour
         {
             isTurn = true;
             audioSource.Pause();
-            ZeroTime(Random.Range(1, 3));
+            ZeroTime(Random.Range(1, 4));
         }
     }
     void GameControl()
     {
         if (isTurn)
         {
-            if (Delay.Wait(1f))
+            if (Delay.Wait(1))
             {
                 if(!stop)
                 {
@@ -64,9 +64,10 @@ public class ControlCenter : MonoBehaviour
     }
     void ZeroTime(float t)
     {
+        timer = 0;
         if (Delay.Wait(t))
         {
-            time = Random.Range(4, 8);
+            time = Random.Range(5, 8);
             isTurn = false;
             audioSource.Play();
         }
